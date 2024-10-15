@@ -1,4 +1,5 @@
 package com.example.demo;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -6,16 +7,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
-@RestController // Indicates that this class is a REST controller
-@RequestMapping("/api/students") // Base path for all endpoints in this controller
+@RestController
+@RequestMapping("/api/students")
 public class StudentController {
 
     @Autowired // Automatically injects the StudentService
     private StudentService studentService;
-
     // GET /api/students
     @GetMapping
-    public List <Student> getAllStudents() {
+    public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
 

@@ -34,5 +34,5 @@ public class StudentConfig {
         };
     };
 
-    // If you have additional beans, you can define them here as well
+
 }

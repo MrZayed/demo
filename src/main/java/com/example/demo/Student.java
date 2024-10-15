@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

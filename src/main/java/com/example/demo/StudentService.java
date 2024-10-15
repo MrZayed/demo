@@ -5,13 +5,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service // Indicates that this class is a service component
-public class StudentService {
+@Service
+public class StudentService{
 
     @Autowired // Automatically injects the StudentRepository
     private StudentRepository studentRepository;
 
-    @Autowired
+
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
@@ -33,4 +33,5 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
 }
